@@ -18,6 +18,7 @@
     "morgan": "^1.9.1",
     "react": "^16.13.0",
     "react-animations": "^1.0.0",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.13.0",
     "react-loader-spinner": "^3.1.5",
     "react-redux": "^7.2.0",
@@ -47,6 +48,8 @@
     "@babel/register": "^7.8.6",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.5",
-    "nodemon": "^1.19.4"
+    "css-loader": "^3.5.2",
+    "nodemon": "^1.19.4",
+    "style-loader": "^1.1.4"
   }
 }

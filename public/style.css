@@ -161,27 +161,12 @@ h3 {
   font-weight: 900;
 }
 
-.home-photo-container > img{
-  width: 40%
-}
 
 .home-photo-container > p{
   font-family: 'Manrope', sans-serif;
   font-size: 18px;
   margin-bottom: 10%;
-}
-
-#san1, #san2{
-  margin-top: 8%;
-}
-
-#san2, #san4{
-  margin-left: 10%;
-}
-
-#san3, #san4{
   margin-top: 10%;
-  margin-bottom: 5%;
 }
 
 .home-contact-container > h3 {
