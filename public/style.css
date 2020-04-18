@@ -1,0 +1,201 @@
+#navbar-container{
+  display: flex;
+  align-items: center;
+  height: 100vh
+}
+
+#navbar-left{
+  flex-basis: 60%;
+  border-right: 0.5rem;
+}
+
+#navbar-right{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  height: 25rem;
+}
+
+h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  margin-left: 1rem;
+}
+#photo-me{
+  width: 98%;
+}
+
+#home-container{
+  display: flex
+}
+
+#home-main{
+  flex-basis: 90%;
+  position: relative;
+}
+
+#home-side-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: whitesmoke;
+  position: fixed;
+  left: 87%;
+  width: 10rem;
+}
+
+#menu-icon{
+  margin-top: 3rem;
+}
+
+#section-icon{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+
+.selected{
+  color: salmon;
+}
+
+
+#home-about-content > p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+}
+
+#home-about-content > h1 {
+  font-family: 'Manrope', sans-serif;
+}
+
+.home-about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#home-about-button > button{
+  width: 8rem;
+  height: 3rem;
+  background-color: salmon;
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 5rem;
+}
+
+.intro-container, .home-about-container, .home-contact-container {
+  height: 100vh;
+  margin-left: 5rem;
+}
+
+.first-element{
+  margin-top: 6rem;
+}
+
+.home-projects-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#home-projects-inner{
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+}
+
+.home-projects-container{
+  margin-left: 5rem;
+}
+
+#home-project-image{
+  flex-basis: 50%;
+}
+
+#home-project-image > img{
+  width: 100%;
+}
+
+#home-project-content{
+  flex-basis: 50%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#home-project-content > p {
+  font-weight: 200;
+}
+
+#home-projects-title > h1{
+  font-family: 'Manrope', sans-serif;
+  font-weight: 900;
+  margin-bottom: 5rem;
+}
+
+#project-social{
+  margin-left: 18rem;
+}
+
+#project-social > a {
+  color: black;
+  margin-left: 1rem;
+}
+
+.center{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.home-photo-container{
+  margin-left: 5rem;
+}
+
+.home-photo-container > h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 32px;
+  margin-left: 1rem;
+  font-weight: 900;
+}
+
+.home-photo-container > img{
+  width: 40%
+}
+
+.home-photo-container > p{
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  margin-bottom: 10%;
+}
+
+#san1, #san2{
+  margin-top: 8%;
+}
+
+#san2, #san4{
+  margin-left: 10%;
+}
+
+#san3, #san4{
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.home-contact-container > h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.home-contact-container > h5{
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+
+.home-contact-container > h6{
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+}
