@@ -1,0 +1,63 @@
+import React from 'react'
+import {MenuFoldOutlined, CloseOutlined, LineOutlined} from '@ant-design/icons';
+import {Link, animateScroll as scroll} from 'react-scroll';
+
+export default class SideBar extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      navbar: false,
+      sections: {}
+    }
+    this.changeSection = this.changeSection.bind(this)
+    this.selectSection = this.selectSection.bind(this)
+  }
+  //function to select a section in page
+  selectSection(idx){
+    const selections = {}
+    this.props.sections.forEach((section, i) => {
+      if (i === idx){
+        selections[section] = true
+      } else {
+        selections[section] = false
+      }
+    })
+    return selections
+  }
+
+
+  componentDidMount(){
+    //on mount display the first section
+    this.setState = {
+      sections: this.selectSection(0)
+    }
+  }
+
+  changeSection(idx){
+    const newSelections = selectSection(idx)
+    this.setState({
+      sections: newSelections,
+    })
+  }
+
+  render(){
+    const {navbar, sections, handleClick} = this.props;
+    return(
+      <div id="home-side-nav">
+        <div id="menu-icon">
+          {navbar ? <CloseOutlined style={{fontSize: '2em'}} onClick={() => handleClick()}/>: <MenuFoldOutlined style={{fontSize: '2em'}} onClick={() => handleClick()}/>}
+        </div>
+        <div id="section-icon">
+          {sections.map((section, idx) => (
+            <div>
+              <Link activeClass='selected' to={section} spy={true} smooth={true}>
+                <LineOutlined
+                  onClick={() => this.changeSection(idx)}/>
+              </Link>
+            </div>))
+          }
+        </div>
+      </div>
+    )
+  }
+}

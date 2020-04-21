@@ -5,7 +5,9 @@ export const HomePhotography= () => {
   return(
     <div className="home-photo-container" id="HomePhotography">
       <h3>Selected Photographs</h3>
-      <PhotoGallery/>
+      <div id="photogallery-container">
+        <PhotoGallery/>
+      </div>
       <p> Checkout more here</p>
     </div>
   )

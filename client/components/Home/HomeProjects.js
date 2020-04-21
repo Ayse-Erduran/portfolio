@@ -19,6 +19,7 @@ const github = {
   "What-da-Duck": "https://github.com/2001-do-jest-while-true/grace-shopper",
   "Q-Party": "https://github.com/2001-second-split/Quarantine-Party"
 }
+
 export const HomeProjects = ({projectName, first}) => {
   return(
     <div className="home-projects-container" id="HomeProjects">
