@@ -21,11 +21,11 @@ body{
   margin-left: 3rem;
 }
 
-h3 {
+/* h3 {
   font-family: 'Manrope', sans-serif;
   font-size: 18px;
   margin-left: 1rem;
-}
+} */
 #navpage-photo{
   height: 70%;
   width: 70%;
@@ -207,7 +207,7 @@ h3 {
   background-color: #f5f5f5;
   width: 400px;
   height: 300px;
-  margin-left: 8rem;
+  margin-left: 5rem;
   margin-top: 4rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 1px 1px #e8e8eb;
@@ -237,3 +237,63 @@ h3 {
   padding-left: 1rem;
   font-family: 'Manrope', sans-serif;
 }
+
+#project-detail-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#project-detail-outer-container{
+  padding-left: 5rem;
+}
+
+#project-detail-intro{
+  display: flex
+}
+
+#project-detail-intro > h2 {
+  font-family: 'Manrope', sans-serif;
+}
+
+#project-detail-intro-left{
+  flex-basis: 70%;
+}
+#project-detail-intro-right{
+  flex-basis: 30%;
+}
+
+#project-detail-overview{
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+#project-detail-overview > h6 {
+  flex-basis: 40%;
+  padding-right: 2rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+
+}
+
+#project-detail-overview > img, #project-detail-tech > img{
+  width: 40%;
+  /* //flex-basis: 30%; */
+}
+
+#project-detail-tech{
+  display: flex;
+}
+
+#project-detail-tech-content > h3 {
+  margin-top: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  margin-left: 2rem;
+}
+
+#project-detail-container > h3{
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+}
+
+

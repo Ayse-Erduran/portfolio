@@ -1,5 +1,6 @@
 import React from 'react'
 import {GithubOutlined, ExportOutlined, FolderOpenOutlined} from '@ant-design/icons';
+import {Link} from 'react-router-dom'
 
 const content = {
   "coLab": "A real-time collaboration application with a code-editor, console and a whiteboard.",
@@ -24,7 +25,9 @@ export const SingleProject = ({projectName}) => {
     <div id="single-project">
       <div id="single-project-top">
         <div id="folder-logo">
-          <FolderOpenOutlined style={{fontSize: "32px", color: "#294c60"}}/>
+          <Link to={`/projects/${projectName}`}>
+            <FolderOpenOutlined style={{fontSize: "32px", color: "#294c60"}}/>
+          </Link>
         </div>
         <div id="social-media-logo">
           <a href={github[projectName]} target="_blank"><GithubOutlined style={{fontSize: "22px", color: "#294c60"}}/></a>
