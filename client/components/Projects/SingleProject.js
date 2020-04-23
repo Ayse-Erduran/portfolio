@@ -17,8 +17,7 @@ class SingleProject extends React.Component{
 
   render(){
     if(this.props.projectsLoading) return <Loader type="ThreeDots" color="Salmon" height={50} width={50} />
-    console.log('PROJECTS', this.props.projects)
-    console.log('PROPS', this.props)
+
     const project = this.props.projects.filter(project => (
       project.name === this.props.projectName
     ))[0]
