@@ -1,43 +1,58 @@
 import React from 'react'
 import {GithubOutlined, ExportOutlined, FolderOpenOutlined} from '@ant-design/icons';
 import {Link} from 'react-router-dom'
+import {fetchAllProjects} from '../../store'
+// import {fetchProject} from '../../store'
+import {connect} from 'react-redux'
+import Loader from 'react-loader-spinner'
 
-const content = {
-  "coLab": "A real-time collaboration application with a code-editor, console and a whiteboard.",
-  "What-da-Duck": "An e-commerce site selling rubber ducks to programmers.",
-  "Q-Party": "A multiplayer 2D video game featuring a main board game interspersed with 3 minigames."
-}
+class SingleProject extends React.Component{
+  constructor(props){
+    super(props)
+  }
 
-const heroku = {
-  "coLab": "https://colabapp.herokuapp.com/",
-  "What-da-Duck": "https://what-da-duck.herokuapp.com/",
-  "Q-Party": "https://super-quarantine-party.herokuapp.com/"
-}
+  componentDidMount(){
+    this.props.fetchAllProjects()
+  }
 
-const github = {
-  "coLab": "https://github.com/Ayse-Erduran/co-Lab",
-  "What-da-Duck": "https://github.com/2001-do-jest-while-true/grace-shopper",
-  "Q-Party": "https://github.com/2001-second-split/Quarantine-Party"
-}
-
-export const SingleProject = ({projectName}) => {
-  return(
-    <div id="single-project">
-      <div id="single-project-top">
-        <div id="folder-logo">
-          <Link to={`/projects/${projectName}`}>
-            <FolderOpenOutlined style={{fontSize: "32px", color: "#294c60"}}/>
-          </Link>
+  render(){
+    if(this.props.projectsLoading) return <Loader type="ThreeDots" color="Salmon" height={50} width={50} />
+    console.log('PROJECTS', this.props.projects)
+    console.log('PROPS', this.props)
+    const project = this.props.projects.filter(project => (
+      project.name === this.props.projectName
+    ))[0]
+    return(
+      <div id="single-project">
+        <div id="single-project-top">
+          <div id="folder-logo">
+            <Link to={`/projects/${project.name}`}>
+              <FolderOpenOutlined style={{fontSize: "32px", color: "#294c60"}}/>
+            </Link>
+          </div>
+          <div id="social-media-logo">
+            <a href={project.github} target="_blank"><GithubOutlined style={{fontSize: "22px", color: "#294c60"}}/></a>
+            <a href={project.heroku} target="_blank"><ExportOutlined style={{fontSize: "22px", color: "#294c60"}}/></a>
+          </div>
         </div>
-        <div id="social-media-logo">
-          <a href={github[projectName]} target="_blank"><GithubOutlined style={{fontSize: "22px", color: "#294c60"}}/></a>
-          <a href={heroku[projectName]} target="_blank"><ExportOutlined style={{fontSize: "22px", color: "#294c60"}}/></a>
+        <div id="single-project-content">
+          <h4>{project.name}</h4>
+          <p>{project.shortContent}</p>
         </div>
       </div>
-      <div id="single-project-content">
-        <h4>{projectName}</h4>
-        <p>{content[projectName]}</p>
-      </div>
-    </div>
-  )
+    )
+  }
+
 }
+
+const mapState = state => ({
+  projects: state.projects,
+  projectsLoading: state.projectsLoading
+})
+
+const mapDispatch = dispatch => ({
+  fetchAllProjects: () => dispatch(fetchAllProjects())
+})
+
+export default connect(mapState, mapDispatch)(SingleProject)
+

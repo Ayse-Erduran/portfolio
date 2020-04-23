@@ -3,6 +3,18 @@ const Project = require('../models/projects')
 
 module.exports = router
 
+router.get('/projects', async(req, res, next) => {
+  try{
+    const projects = await Project.findAll({
+      attributes: ['name', 'shortContent', 'heroku', 'github']
+    })
+    if(!projects) res.sendStatus(404)
+    else res.json(projects)
+  } catch(err){
+    next(err)
+  }
+})
+
 router.get('/projects/:projectName', async(req, res, next) => {
   try{
     const project = await Project.findOne({
@@ -16,3 +28,4 @@ router.get('/projects/:projectName', async(req, res, next) => {
     next(err)
   }
 })
+

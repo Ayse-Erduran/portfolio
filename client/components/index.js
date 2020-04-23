@@ -10,6 +10,6 @@ export {PhotoGallery} from './Home/PhotoGallery';
 export {Routes} from './Routes';
 export {default as SideBar} from './SideBar';
 export {default as About} from './About';
-export {SingleProject} from './Projects/SingleProject';
+export {default as SingleProject} from './Projects/SingleProject';
 export {default as Projects} from './Projects/Projects'
 export {default as ProjectDetail} from './Projects/ProjectDetail'
