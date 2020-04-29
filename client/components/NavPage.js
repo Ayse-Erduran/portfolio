@@ -3,17 +3,17 @@ import styled, { keyframes } from "styled-components";
 import Divider from '@material-ui/core/Divider';
 import {Link} from 'react-router-dom'
 
-//Fade in left animation
-import {fadeInLeft} from "react-animations";
-const FadeInLeftAnimation = keyframes`${fadeInLeft}`;
-const FadeInLeftDiv = styled.div`
-  animation: 5s ${FadeInLeftAnimation};
+//Fade in right animation
+import {fadeInRight} from "react-animations";
+const FadeInRightAnimation = keyframes`${fadeInRight}`;
+const FadeInRightDiv = styled.div`
+  animation: 4s ${FadeInRightAnimation};
 `;
 //Slide in down animation
 import {fadeInDown} from "react-animations";
 const FadeInDownAnimation = keyframes`${fadeInDown}`;
 const FadeInDownDiv = styled.div`
-  animation: 5s ${FadeInDownAnimation};
+  animation: 3s ${FadeInDownAnimation};
 `;
 
 
@@ -21,18 +21,18 @@ export const NavPage = () => {
   return(
     <div id="navbar-container">
       <div id="navbar-left">
-        <FadeInLeftDiv>
-          <img id="navpage-photo" src="/images/navpage.jpeg"></img>
-        </FadeInLeftDiv>
-      </div>
-      <Divider orientation="vertical"/>
-      <div id="navbar-right">
         <FadeInDownDiv>
+          <img id="navpage-photo" src="/images/navpage.jpeg"></img>
+        </FadeInDownDiv>
+      </div>
+      <Divider orientation="vertical" className="mid-divider"/>
+      <div id="navbar-right">
+        <FadeInRightDiv>
           <Link to="/about"><h3>About</h3></Link>
           <Link to="/projects"><h3>Projects</h3></Link>
           <h3>Photography</h3>
-          <h3>Contact</h3>
-        </FadeInDownDiv>
+          <Link to="/contact"><h3>Contact</h3></Link>
+        </FadeInRightDiv>
       </div>
     </div>
   )

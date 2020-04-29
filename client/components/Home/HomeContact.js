@@ -4,18 +4,12 @@ import {LinkedinFilled, GithubFilled, FacebookFilled, InstagramFilled} from '@an
 export const HomeContact = () => {
   return(
     <div id="HomeContact" className="home-contact-container">
-      <h3>Get in touch</h3>
-      <h5>Say hi-</h5>
-      <h6>ae2456@columbia.edu</h6>
-      <h5>Find me on - </h5>
-      <div>
-        <LinkedinFilled />
-        <GithubFilled />
-        <FacebookFilled />
-        <InstagramFilled />
+      <div id="social">
+        <LinkedinFilled className="icon"/>
+        <GithubFilled className="icon"/>
+        <FacebookFilled className="icon"/>
+        <InstagramFilled className="icon"/>
       </div>
-
-
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react'
-import {MenuFoldOutlined, CloseOutlined, LineOutlined} from '@ant-design/icons';
 import {Link, animateScroll as scroll} from 'react-scroll';
+import Divider from '@material-ui/core/Divider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle, faGripLines, faTimes} from '@fortawesome/free-solid-svg-icons'
 
 export default class SideBar extends React.Component{
   constructor(props){
@@ -43,19 +45,21 @@ export default class SideBar extends React.Component{
   render(){
     const {navbar, sections, handleClick} = this.props;
     return(
-      <div id="home-side-nav">
-        <div id="menu-icon">
-          {navbar ? <CloseOutlined style={{fontSize: '2em'}} onClick={() => handleClick()}/>: <MenuFoldOutlined style={{fontSize: '2em'}} onClick={() => handleClick()}/>}
-        </div>
-        <div id="section-icon">
-          {sections.map((section, idx) => (
-            <div>
-              <Link activeClass='selected' to={section} spy={true} smooth={true}>
-                <LineOutlined
-                  onClick={() => this.changeSection(idx)}/>
-              </Link>
-            </div>))
-          }
+      <div className="sidebar-container">
+        <Divider orientation="vertical"/>
+        <div id="home-side-nav">
+          <div id="menu-icon">
+            {navbar ? <FontAwesomeIcon icon={faTimes} className="faMenu" onClick={() => handleClick()}/>: <FontAwesomeIcon icon={faGripLines} className="faMenu" onClick={() => handleClick()}/>}
+          </div>
+          <div id="section-icon">
+            {sections.map((section, idx) => (
+              <div>
+                <Link activeClass='selected' to={section} spy={true} smooth={true}>
+                  <FontAwesomeIcon icon={faCircle} className="faCircle" onClick={() => this.changeSection(idx)}/>
+                </Link>
+              </div>))
+            }
+          </div>
         </div>
       </div>
     )

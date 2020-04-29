@@ -1,10 +1,19 @@
 import React from 'react'
+import {Arrow} from '../index'
 
 export const Intro = () => {
   return(
     <div className="intro-container" id="Intro">
-      <h1>Intro</h1>
-      <p>Welcome to my website</p>
+      <div className="center">
+        <h1>AYSE ERDURAN</h1>
+        <div className="center-title">
+          <h2>Software Engineer</h2>
+          <h2 id="location">New York, NY</h2>
+        </div>
+      </div>
+      <div className="bottom-center">
+        <Arrow/>
+      </div>
     </div>
   )
 }

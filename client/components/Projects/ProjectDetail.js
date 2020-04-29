@@ -3,12 +3,15 @@ import {SideBar} from '../index'
 import {connect} from 'react-redux'
 import {fetchProject} from '../../store'
 import Loader from 'react-loader-spinner'
+import {OverviewPlx} from './Plx/OverviewPlx'
+import {TechPlx} from './Plx/TechPlx'
+import {StackPlx} from './Plx/StackPlx'
 
 const defaultState = {
   navbar: false,
-  sections: ['intro', 'overview', 'technologies']
+  sections: []
+  // sections: ['overview', 'technologies']
 }
-
 
 class ProjectDetail extends React.Component{
   constructor(){
@@ -29,8 +32,8 @@ class ProjectDetail extends React.Component{
   }
 
   render(){
-    const {name, longContent, date, tech, imgOverview, imgTech} = this.props.project
     if (this.props.loading) return <Loader type="ThreeDots" color="Salmon" height={50} width={50} />
+    const {name, date, longContent, imgOverview, imgTech, tech} = this.props.project
     return (
       <div id="project-detail-outer-container">
         {this.state.navbar ? <NavPage/> :
@@ -40,22 +43,13 @@ class ProjectDetail extends React.Component{
             <h2 id="project-detail-intro-right">{date}</h2>
           </div>
           <h3>Overview</h3>
-          <div id="project-detail-overview">
+          <div id="project-detail-overview" className="overview-start">
             <h6>{longContent}</h6>
-            <img src={imgOverview}></img>
+            <OverviewPlx img={imgOverview}/>
           </div>
-          <div id="project-detail-tech">
-            <img src={imgTech}></img>
-            <div id="project-detail-tech-content">
-              <h3>Technologies</h3>
-              <ul>
-                {
-                  tech.map(elt => (
-                      <li>{elt}</li>
-                  ))
-                }
-              </ul>
-            </div>
+          <div id="project-detail-tech" className="tech-start">
+            <StackPlx tech={tech}/>
+            <TechPlx img={imgTech}/>
           </div>
         </div>}
         <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>
@@ -66,8 +60,8 @@ class ProjectDetail extends React.Component{
 }
 
 const mapState = state => ({
-  project: state.project,
-  loading: state.loading
+  project: state.project.project,
+  loading: state.project.loading
 })
 
 const mapDispatch = dispatch => ({

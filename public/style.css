@@ -1,5 +1,6 @@
 body{
-  background-color: whitesmoke;
+  margin: 0px;
+  background-color: #f0f0f0;
 }
 
 #navbar-container{
@@ -9,45 +10,46 @@ body{
 }
 
 #navbar-left{
-  flex-basis: 60%;
+  flex-basis: 75%;
   border-right: 0.5rem;
 }
 
 #navbar-right{
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
+  flex-basis: 25%;
   height: 25rem;
   margin-left: 3rem;
 }
 
-/* h3 {
-  font-family: 'Manrope', sans-serif;
-  font-size: 18px;
-  margin-left: 1rem;
-} */
 #navpage-photo{
-  height: 70%;
-  width: 70%;
+  height: 60%;
+  width: 60%;
   margin-left: 8rem;
 
 }
+
+/* .photo-transition{
+  height: 10rem;
+} */
 
 #home-container{
   display: flex
 }
 
 #home-main{
-  flex-basis: 90%;
   position: relative;
+  width: 88%;
 }
+
 
 #home-side-nav{
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color:#e1dedf;
+  /* background-color: #e8e8eb; */
+  /* background-color:#e1dedf; */
   position: fixed;
   top: 0%;
   left: 87%;
@@ -68,17 +70,76 @@ body{
 
 .selected{
   color: salmon;
-  transform: rotate(135deg)
 }
 
+.intro-container{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.center{
+  margin-top: 30%;
+  margin-left: 10%;
+  font-family: 'Antic Didone', serif;
+}
+
+.center > h1{
+  font-size: 34px;
+  font-weight: 100;
+  letter-spacing: 20px;
+}
+.center-title{
+  margin-left: 20%;
+}
+.center-title > h2{
+  font-family: 'Antic Didone', serif;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+
+#location{
+  padding-left: 1.3rem;
+}
+
+.Arrow{
+  margin-left: 40%;
+}
+/* .bottom-center{
+  margin-top: 15%;
+  margin-left: 40%;
+  position: relative;
+  left: 0;
+  top: 20%;
+  width: 60%;
+} */
+
+.faChevron{
+  font-size: 34px;
+  font-weight: 100;
+  color: darkgrey;
+}
 
 #home-about-content > p {
-  font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-family: 'Antic Didone', serif;
+  font-size: 28px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
+  color: #2f4550
 }
 
-#home-about-content > h1 {
-  font-family: 'Manrope', sans-serif;
+#home-about-content{
+  margin-top: 20%;
+}
+.darker{
+  color: #14213d;
+  font-weight: 200;
 }
 
 .home-about-container {
@@ -89,61 +150,70 @@ body{
 #home-about-button > button{
   width: 8rem;
   height: 3rem;
-  background-color: salmon;
-  color: #ffffff;
-  font-family: 'Manrope', sans-serif;
-  font-size: 14px;
-  font-weight: 100;
+  font-size: 24px;
+  letter-spacing: 2px;
+  background-color: #f0f0f0;
+  border: 1px solid #2f4550;
+  color: #2f4550;
+  font-family: 'Antic Didone', serif;
+  font-size: 18px;
+  font-weight: 200;
   margin-top: 5rem;
+  margin-left: 70%;
 }
 
-.intro-container, .home-about-container, .home-contact-container {
+Button > button:hover, #home-about-button > button:hover{
+  color: salmon;
+  border: 1px solid salmon;
+}
+
+.intro-container, .home-about-container{
   height: 100vh;
   margin-left: 8rem;
 }
 
-.first-element{
-  margin-top: 6rem;
-}
 
 .home-projects-container{
-  display: flex;
-  flex-direction: column;
+  width: 88%;
 }
 
-#home-projects-inner{
-  display: flex;
-  justify-content: center;
-  height: 50vh;
+
+.Button > button{
+  width: 8rem;
+  height: 3rem;
+  letter-spacing: 2px;
+  font-family: 'Antic Didone', serif;
+  margin-bottom: 5rem;
+  font-size: 24px;
+  font-weight: 200;
+  margin-top: 1rem;
+  position: absolute;
+  z-index: 4;
+  background-color: white;
+  border: 1px solid #2f4550;
+  color: #2f4550;
 }
 
-.home-projects-container{
-  margin-left: 8rem;
+#BiggerButton > button{
+  width: 12rem;
+  position: absolute;
+  z-index: 8
 }
 
-#home-project-image{
-  flex-basis: 50%;
-}
-
-#home-project-image > img{
+.Photo > img{
   width: 100%;
 }
 
-#home-project-content{
-  flex-basis: 50%;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  font-family: 'Montserrat', sans-serif;
+/* .background{
+  position: absolute;
+  z-index: 0;
+} */
+.Project > img{
+  width: 984px;
 }
-
-#home-project-content > p {
-  font-weight: 200;
-}
-
-#home-projects-title > h1{
-  font-family: 'Manrope', sans-serif;
-  font-weight: 900;
-  margin-bottom: 5rem;
+.project-transition{
+  position:absolute;
+  z-index: 0;
 }
 
 #project-social{
@@ -160,16 +230,16 @@ body{
   padding-right: 3rem;
 }
 
-.home-photo-container{
-  margin-left: 8rem;
+/* .home-photo-container{
+  margin-left: 8rem; */
 }
-
+/*
 .home-photo-container > h3 {
   font-family: 'Manrope', sans-serif;
   font-size: 32px;
   margin-left: 1rem;
   font-weight: 900;
-}
+} */
 
 
 .home-photo-container > p{
@@ -179,28 +249,25 @@ body{
   margin-top: 10%;
 }
 
-.home-contact-container > h3 {
-  font-family: 'Manrope', sans-serif;
-  font-size: 32px;
-  font-weight: 900;
+.home-contact-container{
+  position: absolute;
+  z-index: 4;
+  height: 5rem;
+  width: 100%;
+  background-color: black;
 }
 
-.home-contact-container > h5{
-  font-family: 'Manrope', sans-serif;
+#social{
+  margin-left: 40%;
+  margin-top: 2rem;
   font-size: 20px;
+  width: 10rem;
+  color: white;
+  display: flex;
+  justify-content: space-around;
 }
-
-.home-contact-container > h6{
-  font-family: 'Manrope', sans-serif;
-  font-size: 18px;
-}
-
-#photogallery-container{
-  width: 93%;
-}
-
-#past, #present, #skills{
-  height: 100vh
+#social > .icon:hover{
+  color:lightblue;
 }
 
 #single-project{
@@ -212,7 +279,6 @@ body{
   margin-bottom: 2rem;
   box-shadow: 0 0 1px 1px #e8e8eb;
 }
-
 #single-project-top{
   display: flex;
   padding-top: 1rem;
@@ -231,7 +297,13 @@ body{
   background-color: #f0f0f0;
   display: flex;
   flex-wrap: wrap;
+  width: 88%;
 }
+
+#projects-outer-container{
+  display:flex
+}
+
 
 #single-project-content{
   padding-left: 1rem;
@@ -241,18 +313,25 @@ body{
 #project-detail-container{
   display: flex;
   flex-direction: column;
+  width: 87%;
+  border: 2px solid grey;
 }
 
 #project-detail-outer-container{
-  padding-left: 5rem;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #project-detail-intro{
-  display: flex
+  display: flex;
+  font-weight: 300;
+  font-size: 22px;
+  background-color:#e8e8eb;
 }
 
 #project-detail-intro > h2 {
-  font-family: 'Manrope', sans-serif;
+  padding-left: 5rem;
+  letter-spacing: 4px;
 }
 
 #project-detail-intro-left{
@@ -263,37 +342,254 @@ body{
 }
 
 #project-detail-overview{
+  height: 100vh;
   display: flex;
   margin-bottom: 3rem;
+  margin-left: 5rem;
 }
 
 #project-detail-overview > h6 {
   flex-basis: 40%;
   padding-right: 2rem;
-  font-family: 'Manrope', sans-serif;
   font-size: 18px;
-
+  margin-top: 1rem;
+  height: 150px;
+  position: absolute;
+  z-index: 3;
+  width: 400px;
 }
 
-#project-detail-overview > img, #project-detail-tech > img{
-  width: 40%;
-  /* //flex-basis: 30%; */
+
+.Overview > img, .Tech > img{
+  width: 80%;
+  height: 75%;
+  margin-left: 5rem;
+  margin-top: 20rem;
+  box-shadow: 0 0 2px 2px #e8e8eb;
+}
+
+.Tech > img{
+  /* margin-left: 5rem; */
+  margin-top: 25rem;
+  width: 700px;
+  height: 370px;
+  border: 2px solid blue;
+  margin-left: 0;
 }
 
 #project-detail-tech{
   display: flex;
+  height: 100vh;
 }
 
-#project-detail-tech-content > h3 {
-  margin-top: 0;
-  font-family: 'Manrope', sans-serif;
+.Stack > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stack-elt{
   font-size: 22px;
-  margin-left: 2rem;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 1rem;
+  width: 120px;
 }
 
 #project-detail-container > h3{
-  font-family: 'Manrope', sans-serif;
   font-size: 22px;
+  letter-spacing: 2px;
+  margin-left: 5rem;
+  margin-bottom: 0;
+  width: 100px;
+  margin-top: 3rem;
+}
+
+#about-outer-container{
+  display: flex
+}
+#about-container{
+  width: 88%;
+}
+
+#about-intro{
+  position: relative;
+  /* text-align: center; */
+}
+#about-intro > img{
+  width: 700px;
+  margin-left: 6rem;
+  margin-top: 4rem;
+}
+
+#about-intro > h3 {
+  position: absolute;
+  left: 7rem;
+  font-size: 36px;
+  font-family: 'Manrope', sans-serif;
+}
+#firstname{
+  top: 0rem;
+}
+
+#lastname{
+  top: 2.2rem;
+}
+#intro-box{
+  position: absolute;
+  bottom: -200px;
+  right: 400px;
+  width: 370px;
+  color: white;
+  padding: 30px;
+  font-family: 'Manrope', sans-serif;
+  background-color: black;
+}
+
+.bold{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+#past-present, #skills{
+  height: 100vh
+}
+
+#past-present{
+  padding-top: 15rem;
+  width: 700px;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+}
+
+#skills{
+  margin-top: 5rem;
+  font-family: 'Manrope', sans-serif;
+  color: white;
+}
+
+#skills > h3{
+  font-size: 32px;
+  padding-left: 5rem;
+  padding-top: 10rem;
+}
+
+#skills-list{
+  display: flex;
+}
+
+#ul-left{
+  padding-left: 5rem;
+  font-size: 24px;
+}
+
+#ul-right{
+  padding-left: 15rem;
+  font-size: 24px;
+}
+#ul-left > li, #ul-right > li{
+  list-style-type: none;
 }
 
 
+#contact-outer-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 25%;
+  width: 63%;
+}
+#contact-form{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+#personal-info{
+  display: flex;
+}
+.form-field{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.form-field > input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-color: darkgray;
+  background-color: #f0f0f0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  width: 232px;
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+}
+
+.form-field > textarea{
+  height: 300px;
+  border-color: darkgrey;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  background-color: #f0f0f0;
+}
+.form-field > textarea:active{
+  outline-color: darkgrey;
+  outline-width: 1px;
+}
+
+#contact-parent{
+  display: flex;
+  height: 100vh;
+}
+
+#contact-prompt {
+  padding: 0px;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+#contact-prompt > p{
+  font-family: 'Manrope', sans-serif;
+  font-size: 26px;
+  margin-left: -16rem;
+}
+
+#contact-prompt > p:active{
+  outline-color: darkgrey;
+  outline-width: 1px;
+}
+
+.submit-button > button{
+  width: 300px;
+  margin-top: 1rem;
+  border: hidden;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  color: darkgrey;
+  background-color: #f0f0f0;
+
+}
+
+.submit-button > button:active {
+  outline-color: darkgrey;
+  outline-width: 1px;
+  border: none;
+}
+#arrow{
+  font-size: 24px;
+}
+#arrow:hover {
+  margin-left: 6px;
+}
+
+.faCircle{
+  font-size: 5px;
+}
+.faMenu{
+  font-size: 18px;
+}

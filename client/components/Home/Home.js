@@ -3,6 +3,7 @@ import React from 'react';
 import {NavPage, Intro, HomeAbout, HomeProjects, HomePhotography, HomeContact, SideBar} from '../../components';
 
 
+
 //Import the Parallax component
 //import { Parallax } from 'react-scroll-parallax';
 //import ParallaxComponent from '../ParallaxComponent'
@@ -13,7 +14,7 @@ import {NavPage, Intro, HomeAbout, HomeProjects, HomePhotography, HomeContact, S
 //declare and populate initial state
 const defaultState = {
   navbar: false,
-  sections: ['Intro', 'HomeAbout', 'HomeProjects', 'HomePhotography', 'HomeContact']
+  sections: ['Intro', 'HomeAbout', 'HomeProjects', 'HomePhotography']
 }
 
 export default class Home extends React.Component{
@@ -38,9 +39,9 @@ export default class Home extends React.Component{
               <div>
                 <Intro/>
                 <HomeAbout/>
-                <HomeProjects projectName="coLab" first={true} />
-                <HomeProjects projectName="What-da-Duck" first={false} />
-                <HomeProjects projectName="Q-Party" first={false} />
+                <div className="project-transition"></div>
+                <HomeProjects/>
+                <div className="photo-transition"></div>
                 <HomePhotography/>
                 <HomeContact/>
               </div>

@@ -2,7 +2,6 @@ import React from 'react'
 import {GithubOutlined, ExportOutlined, FolderOpenOutlined} from '@ant-design/icons';
 import {Link} from 'react-router-dom'
 import {fetchAllProjects} from '../../store'
-// import {fetchProject} from '../../store'
 import {connect} from 'react-redux'
 import Loader from 'react-loader-spinner'
 
@@ -17,7 +16,7 @@ class SingleProject extends React.Component{
 
   render(){
     if(this.props.projectsLoading) return <Loader type="ThreeDots" color="Salmon" height={50} width={50} />
-
+    console.log('PROJECTS', this.props.projects)
     const project = this.props.projects.filter(project => (
       project.name === this.props.projectName
     ))[0]
@@ -45,8 +44,8 @@ class SingleProject extends React.Component{
 }
 
 const mapState = state => ({
-  projects: state.projects,
-  projectsLoading: state.projectsLoading
+  projects: state.project.projects,
+  projectsLoading: state.project.projectsLoading
 })
 
 const mapDispatch = dispatch => ({

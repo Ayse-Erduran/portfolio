@@ -1,31 +1,12 @@
 const router = require('express').Router()
-const Project = require('../models/projects')
+
+router.use('/projects', require('./projects'))
+router.use('/contact', require('./contact'))
 
 module.exports = router
 
-router.get('/projects', async(req, res, next) => {
-  try{
-    const projects = await Project.findAll({
-      attributes: ['name', 'shortContent', 'heroku', 'github']
-    })
-    if(!projects) res.sendStatus(404)
-    else res.json(projects)
-  } catch(err){
-    next(err)
-  }
+router.use((req, res, next) => {
+  const error = new Error('Not Found')
+  error.status = 404
+  next(error)
 })
-
-router.get('/projects/:projectName', async(req, res, next) => {
-  try{
-    const project = await Project.findOne({
-      where: {
-        name: req.params.projectName
-      }
-    })
-    if(!project) res.sendStatus(404)
-    else res.json(project)
-  } catch(err){
-    next(err)
-  }
-})
-

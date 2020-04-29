@@ -5,7 +5,7 @@ import 'react-awesome-slider/dist/styles.css';
 
 export const PhotoGallery = () => {
   return(
-    <AwesomeSlider>
+    <AwesomeSlider className="background">
       <div data-src="/images/sanfran/1.jpeg" />
       <div data-src="/images/sanfran/2.jpeg" />
       <div data-src="/images/sanfran/3.jpeg" />
