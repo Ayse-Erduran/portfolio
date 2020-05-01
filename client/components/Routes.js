@@ -1,5 +1,5 @@
 import React from 'react'
-import {About, Home, Projects, ProjectDetail, Contact} from './index'
+import {About, Home, Projects, ProjectDetail, Contact, Photos, NavPage} from './index'
 import {Switch, Route} from "react-router-dom";
 
 export const Routes = () => {
@@ -10,6 +10,8 @@ export const Routes = () => {
       <Route exact path="/projects" component={Projects}/>
       <Route path="/projects/:projectName" component={ProjectDetail}/>
       <Route path="/contact" component={Contact}/>
+      <Route path="/photographs" component={Photos}/>
+      <Route path="/navpage" component={NavPage}/>
     </div>
   )
 }

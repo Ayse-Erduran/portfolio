@@ -1,30 +1,18 @@
 import React from 'react'
 import Plx from 'react-plx';
-import { PhotoGallery } from '../../index'
+import {NavLink} from 'react-router-dom'
 
 const titleData = [
   {
-    start: '.photo-transition',
-    duration: '50vh',
+    start: '.home-photo-container',
+    startOffset: '10vh',
+    duration: '35vh',
     properties: [
       {
         startValue: 15,
-        endValue: 90,
+        endValue: 115,
         unit: 'vh',
         property: 'translateX',
-      }
-    ]
-  }
-]
-const imageData = [
-  {
-    start: '.photo-transition',
-    duration: '40vh',
-    properties: [
-      {
-        startValue: 0,
-        endValue: 0.5,
-        property: 'opacity'
       }
     ]
   }
@@ -35,10 +23,7 @@ export const PhotoPlx = () => {
   return (
     <div>
       <Plx className="Button" id="BiggerButton" parallaxData={titleData}>
-        <button>Photographs</button>
-      </Plx>
-      <Plx className="Photo" parallaxData={imageData}>
-        <PhotoGallery/>
+        <NavLink to="/photographs" className="Button" ><button>Photographs</button></NavLink>
       </Plx>
     </div>
   );

@@ -4,10 +4,11 @@ import Plx from 'react-plx';
 const techData = [
   {
     start: '.tech-start',
+    startOffset: '60vh',
     duration: '40vh',
     properties: [
       {
-        startValue: -10,
+        startValue: 0,
         endValue: -40,
         unit: 'vh',
         property: 'translateY',

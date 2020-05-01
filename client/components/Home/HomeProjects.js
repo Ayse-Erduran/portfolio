@@ -1,12 +1,27 @@
 import React from 'react'
-import Divider from '@material-ui/core/Divider';
-import {GithubOutlined, ExportOutlined} from '@ant-design/icons';
 import {ProjectPlx} from './Plx/ProjectPlx'
+import simpleParallax from 'simple-parallax-js';
 
-export const HomeProjects = () => {
-  return(
-    <div className="home-projects-container" id="HomeProjects">
-      <ProjectPlx/>
-    </div>
-  )
+export class HomeProjects extends React.Component{
+  constructor(){
+    super()
+  }
+
+  componentDidMount(){
+    const image =  document.getElementById('project-plx');
+    new simpleParallax(image, {
+      delay: 0,
+      orientation: 'down',
+      scale: 1.6
+    });
+  }
+
+  render(){
+    return(
+      <div className="home-projects-container" id="HomeProjects">
+        <ProjectPlx/>
+        <img id="project-plx" src="/images/projects/Q-Party.png "/>
+      </div>
+    )
+  }
 }

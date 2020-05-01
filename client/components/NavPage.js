@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import Divider from '@material-ui/core/Divider';
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 //Fade in right animation
 import {fadeInRight} from "react-animations";
@@ -28,10 +28,11 @@ export const NavPage = () => {
       <Divider orientation="vertical" className="mid-divider"/>
       <div id="navbar-right">
         <FadeInRightDiv>
-          <Link to="/about"><h3>About</h3></Link>
-          <Link to="/projects"><h3>Projects</h3></Link>
-          <h3>Photography</h3>
-          <Link to="/contact"><h3>Contact</h3></Link>
+          <NavLink to="/" className="navlink"><h3>Home</h3></NavLink>
+          <NavLink to="/about" className="navlink"><h3>About</h3></NavLink>
+          <NavLink to="/projects" className="navlink"><h3>Projects</h3></NavLink>
+          <NavLink to="/photographs" className="navlink"><h3>Photographs</h3></NavLink>
+          <NavLink to="/contact" className="navlink"><h3>Contact</h3></NavLink>
         </FadeInRightDiv>
       </div>
     </div>

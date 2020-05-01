@@ -13,3 +13,8 @@ export const PhotoGallery = () => {
     </AwesomeSlider>
   )
 };
+
+
+      {/* <Plx className="Photo" parallaxData={imageData}>
+        <PhotoGallery/>
+      </Plx> */}

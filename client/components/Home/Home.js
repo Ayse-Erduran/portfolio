@@ -1,15 +1,6 @@
 import React from 'react';
 //import children components
-import {NavPage, Intro, HomeAbout, HomeProjects, HomePhotography, HomeContact, SideBar} from '../../components';
-
-
-
-//Import the Parallax component
-//import { Parallax } from 'react-scroll-parallax';
-//import ParallaxComponent from '../ParallaxComponent'
-
-//import background image
-//import backgroundImage  from '../../../public/images/homeBg.jpg'
+import {NavPage, Intro, HomeAbout, HomeProjects, HomePhotography, Footer, SideBar} from '../../components';
 
 //declare and populate initial state
 const defaultState = {
@@ -39,11 +30,10 @@ export default class Home extends React.Component{
               <div>
                 <Intro/>
                 <HomeAbout/>
-                <div className="project-transition"></div>
                 <HomeProjects/>
                 <div className="photo-transition"></div>
                 <HomePhotography/>
-                <HomeContact/>
+                <Footer foreground={true}/>
               </div>
             }
         </div>

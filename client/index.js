@@ -3,12 +3,13 @@ import {render} from 'react-dom'
 import {BrowserRouter as Router} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store'
-import {App} from './components/App.js'
-
+import {ScrollToTop, App} from './components'
 render(
   <Provider store={store}>
     <Router>
-      <App />
+      <ScrollToTop>
+        <App />
+      </ScrollToTop>
     </Router>
   </Provider>,
   document.getElementById('app')

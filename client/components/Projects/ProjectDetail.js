@@ -1,9 +1,9 @@
 import React from 'react'
-import {SideBar} from '../index'
+import {SideBar, Footer} from '../index'
 import {connect} from 'react-redux'
 import {fetchProject} from '../../store'
 import Loader from 'react-loader-spinner'
-import {OverviewPlx} from './Plx/OverviewPlx'
+import {OverviewImgPlx} from './Plx/OverviewImgPlx'
 import {TechPlx} from './Plx/TechPlx'
 import {StackPlx} from './Plx/StackPlx'
 
@@ -39,18 +39,19 @@ class ProjectDetail extends React.Component{
         {this.state.navbar ? <NavPage/> :
         <div id="project-detail-container">
           <div id="project-detail-intro">
-            <h2 id="project-detail-intro-left">{name}</h2>
+            <h2 id="project-detail-intro-left">{name.toUpperCase()}</h2>
             <h2 id="project-detail-intro-right">{date}</h2>
           </div>
           <h3>Overview</h3>
           <div id="project-detail-overview" className="overview-start">
             <h6>{longContent}</h6>
-            <OverviewPlx img={imgOverview}/>
+            <OverviewImgPlx name={name} img={imgOverview}/>
           </div>
           <div id="project-detail-tech" className="tech-start">
             <StackPlx tech={tech}/>
             <TechPlx img={imgTech}/>
           </div>
+          <Footer/>
         </div>}
         <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>
       </div>

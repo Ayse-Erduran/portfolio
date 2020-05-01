@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavPage, SideBar, SingleProject} from '../index'
+import {NavPage, SideBar, SingleProject, Footer} from '../index'
 
 const defaultState = {
   navbar: false,
@@ -21,6 +21,7 @@ export default class Projects extends React.Component{
   }
   render(){
     return(
+    <div id="projects-outer-parent">
       <div id="projects-outer-container">
         {this.state.navbar ? <NavPage/> :
         <div id="projects-container">
@@ -30,6 +31,9 @@ export default class Projects extends React.Component{
         </div>}
         <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>
       </div>
+      {/* <div style={{height: '4rem'}}/> */}
+      <Footer/>
+    </div>
     )
   }
 

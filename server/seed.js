@@ -31,7 +31,7 @@ const projects = [
     github: "https://github.com/2001-do-jest-while-true/grace-shopper",
     longContent: "What-da-Duck is an e-commerce site selling rubber ducks to programmers. You can choose a pre-built duck or customize your own",
     date: "2020",
-    tech: ["React", "Redux", "PostgreSQL", "Sequelize", "Node.js", "Passport.js"],
+    tech: ["React", "Redux", "Postgres", "Sequelize", "Node.js", "Passport.js"],
     imgOverview: "/images/projects/What-da-Duck/What-da-Duck1.png",
     imgTech:"/images/projects/What-da-Duck/What-da-Duck2.png",
   }
