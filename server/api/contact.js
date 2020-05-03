@@ -1,6 +1,8 @@
 var nodemailer = require('nodemailer');
-const config = require('../../config');
 const router = require('express').Router()
+
+
+if (process.env.NODE_ENV !== 'production') require('../../config')
 
 module.exports = router
 const transport = {
