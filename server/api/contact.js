@@ -4,6 +4,21 @@ const router = require('express').Router()
 
 if (process.env.NODE_ENV !== 'production') require('../../config')
 
+// const secret = require('../../getParam')
+
+
+// async function trial(){
+//   try{
+//     const pass = await secret.get();
+//     console.log('SECRET', pass)
+//   } catch(err){
+//     console.log(err.stack)
+//   }
+  
+// }
+
+// trial()
+
 module.exports = router
 const transport = {
   host: 'smtp.gmail.com',
@@ -13,15 +28,15 @@ const transport = {
   }
 }
 
-const transporter = nodemailer.createTransport(transport)
+// const transporter = nodemailer.createTransport(transport)
 
-transporter.verify((error, success) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Server is ready to take messages');
-  }
-});
+// transporter.verify((error, success) => {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log('Server is ready to take messages');
+//   }
+// });
 
 
 router.post('/', (req, res, next) => {
