@@ -43,7 +43,7 @@ export default class About extends React.Component{
     return(
       <div id="about-outer-container">
         <div id="about-container">
-          {this.state.navbar? <NavPage/> :
+          {this.state.navbar? <NavPage handleClick={this.handleClick}/> :
           <div id="about-main">
             <div id="about-intro">
               <img src="/images/about/website-me.jpeg"></img>

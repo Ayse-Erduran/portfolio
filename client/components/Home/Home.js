@@ -26,7 +26,7 @@ export default class Home extends React.Component{
     return(
       <div id="home-container">
         <div id="home-main">
-            {this.state.navbar ? <NavPage/> :
+            {this.state.navbar ? <NavPage handleClick={this.handleClick}/> :
               <div>
                 <Intro/>
                 <HomeAbout/>

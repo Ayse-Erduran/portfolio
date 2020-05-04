@@ -36,7 +36,7 @@ export default class Photos extends React.Component{
   render(){
     return(
       <div id="photos-outer-container">
-        {this.state.navbar? <NavPage/> :
+        {this.state.navbar? <NavPage handleClick={this.handleClick}/> :
           <div id="photos-inner-container">
             <div id="photo-title">
               <h1>Photographs</h1>

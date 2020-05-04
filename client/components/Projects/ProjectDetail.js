@@ -1,5 +1,5 @@
 import React from 'react'
-import {SideBar, Footer} from '../index'
+import {SideBar, Footer, NavPage} from '../index'
 import {connect} from 'react-redux'
 import {fetchProject} from '../../store'
 import Loader from 'react-loader-spinner'
@@ -51,6 +51,7 @@ class ProjectDetail extends React.Component{
             <StackPlx tech={tech}/>
             <TechPlx img={imgTech}/>
           </div>
+          <div style={{height: '6rem'}}></div>
           <Footer/>
         </div>}
         <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>

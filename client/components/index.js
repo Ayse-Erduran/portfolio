@@ -7,7 +7,6 @@ export {HomeAbout} from './Home/HomeAbout';
 export {HomeProjects} from './Home/HomeProjects';
 export {HomePhotography} from './Home/HomePhotography';
 export {Footer} from './Footer';
-export {PhotoGallery} from './Home/PhotoGallery';
 export {Routes} from './Routes';
 export {default as SideBar} from './SideBar';
 export {default as About} from './About';

@@ -23,7 +23,7 @@ export default class Projects extends React.Component{
     return(
     <div id="projects-outer-parent">
       <div id="projects-outer-container">
-        {this.state.navbar ? <NavPage/> :
+        {this.state.navbar ? <NavPage handleClick={this.handleClick}/> :
         <div id="projects-container">
           <SingleProject projectName="coLab"/>
           <SingleProject projectName="Q-Party"/>

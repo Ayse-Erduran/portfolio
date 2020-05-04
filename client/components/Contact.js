@@ -2,14 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {sendMessage} from '../store'
 import {NavPage, SideBar, Footer} from './index'
-import styled, { keyframes } from "styled-components";
-//Fade in right animation
-import {fadeInRight} from "react-animations";
-const FadeInRightAnimation = keyframes`${fadeInRight}`;
-const FadeInRightDiv = styled.div`
-  animation: 5s ${FadeInRightAnimation};
-`;
-
 import {SwapRightOutlined} from '@ant-design/icons'
 
 const defaultState = {
@@ -83,13 +75,11 @@ class Contact extends React.Component{
     return(
     <div id="contact-outer-parent">
       <div id="contact-parent">
-        {this.state.navbar? <NavPage/> :
+        {this.state.navbar? <NavPage handleClick={this.handleClick}/> :
           <div id="contact-outer-container">
-            <FadeInRightDiv>
               <div id="contact-prompt">
-                <p>Would love to hear from you!</p>
+                <p>Get in touch</p>
               </div>
-            </FadeInRightDiv>
             <form id="contact-form" onSubmit={(evt) => this.handleSubmit(evt)}>
             <div id="personal-info">
               <div className="form-field">

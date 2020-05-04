@@ -1,5 +1,7 @@
 import React from 'react'
 import {LinkedinFilled, GithubFilled, FacebookFilled, InstagramFilled} from '@ant-design/icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export const Footer = (props) => {
   return(
@@ -16,6 +18,9 @@ export const Footer = (props) => {
         </a>
         <a href="https://www.instagram.com/ayseerdz/">
           <InstagramFilled className="icon"/>
+        </a>
+        <a href="mailto: ayyseerduran@gmail.com">
+          <FontAwesomeIcon icon={faEnvelope} className="icon"/>
         </a>
       </div>
     </div>

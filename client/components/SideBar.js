@@ -46,7 +46,6 @@ export default class SideBar extends React.Component{
     const {navbar, sections, handleClick} = this.props;
     return(
       <div className="sidebar-container">
-        <Divider orientation="vertical"/>
         <div id="home-side-nav">
           <div id="menu-icon">
             {navbar ? <FontAwesomeIcon icon={faTimes} className="faMenu" onClick={() => handleClick()}/>: <FontAwesomeIcon icon={faGripLines} className="faMenu" onClick={() => handleClick()}/>}
