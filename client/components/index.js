@@ -13,7 +13,6 @@ export {default as About} from './About';
 export {default as SingleProject} from './Projects/SingleProject';
 export {default as Projects} from './Projects/Projects'
 export {default as ProjectDetail} from './Projects/ProjectDetail'
-export {default as Contact} from './Contact'
 export {Arrow} from './Home/Plx/Arrow'
 export {default as Photos} from './Photos'
 export {default as ScrollToTop} from './ScrollToTop'

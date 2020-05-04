@@ -56,12 +56,11 @@ export default class About extends React.Component{
               </div>
             </div>
             <div id="past-present">
-              <p> I was introduced to computer science in college through a course I took on Java. Having discovered my passion for programming, I continued on expanding my knowledge through personal projects and online courses focused on programming and data science.</p>
-              <p> I graduated from Columbia University in 2017 with a BA in Art History and started my career in the art industry, working for international art galleries and auction houses. During these experiences, I relied heavily on technology to find solutions and became increasingly interested in the process of building software to help individuals, and organizations solve problems. This curiosity led me to the Immersive Full Stack Engineering Program at Grace Hopper.</p>
-              <p> I’m now a proud Software Engineer specializing in the NERDS stack. I am passionate about full-stack development and am excited by new machine learning and artificial intelligence technologies. </p>
+              <p> I was introduced to computer science in college through a course I took on Java. Having discovered my passion for programming, I continued expanding my knowledge through personal projects and online courses focused on programming and data science.</p>
+              <p> I graduated from Columbia University in 2017 and started my career in the art industry, working for international art galleries and auction houses. During these experiences, I relied heavily on technology to find solutions and became increasingly interested in the process of building software to help individuals, and organizations solve problems. This curiosity led me to the Immersive Full Stack Engineering Program at Grace Hopper.</p>
+              <p> I’m a Software Engineer specializing in the NERDS stack. I am passionate about full-stack development and am excited by new machine learning and artificial intelligence technologies. </p>
               <p>Apart from work, you can find me taking photographs, cooking spicy food and nerding about space on twitter! </p>
             </div>
-            {/* <div style={{height: '100px'}}/> */}
                 <div id="skills" className={this.state.black? 'black': ''}>
                   <h3> Skills: </h3>
                   <div id="skills-list">
@@ -92,7 +91,9 @@ export default class About extends React.Component{
                     </ul>
                   </div>
                 </div>
-              <Footer foreground={true}/>
+              <div id="about-footer">
+                <Footer foreground={true}/>
+              </div>
           </div>}
         </div>
         <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>

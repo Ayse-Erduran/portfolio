@@ -5,7 +5,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export const Footer = (props) => {
   return(
-    <div id="HomeContact" className="home-contact-container">
+    <div className="footer-container">
       <div id="social" className={props.foreground? 'foreground': ''}>
         <a href="https://www.linkedin.com/in/ayseerduran/">
           <LinkedinFilled className="icon"/>
