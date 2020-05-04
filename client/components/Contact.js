@@ -39,9 +39,8 @@ class Contact extends React.Component{
 
   async handleSubmit(evt){
     evt.preventDefault()
-    alert('SUBMIT')
-    // await this.props.sendMessage(this.state)
-    // this.props.status.msg === 'success' ? alert('Message sent!') : ('Message failed to send. Please try again.')
+    await this.props.sendMessage(this.state)
+    this.props.status.msg === 'success' ? alert('Message sent!') : ('Message failed to send. Please try again.')
   }
 
   handleClick(){

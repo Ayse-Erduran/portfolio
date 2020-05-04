@@ -38,22 +38,3 @@ export const NavPage = () => {
     </div>
   )
 }
-
-
-
-
-// export const Navbar = () => {
-//   return(
-//     <div id="navbar-container">
-//       <div id="navbar-left">
-//         <h1>Home</h1>
-//         <h1>Projects</h1>
-//         <h1>Photography</h1>
-//       </div>
-//       <div id="navbar-right">
-//           <h1>Contact</h1>
-//       </div>
-//     </div>
-//   )
-
-// }

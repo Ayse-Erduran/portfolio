@@ -4,7 +4,6 @@ import simpleParallax from 'simple-parallax-js';
 import { PhotoGallery } from '../index'
 
 
-//MAKE FUNCTIONAL COMPONENT!!!!
 export class HomePhotography extends React.Component{
   constructor(){
     super()

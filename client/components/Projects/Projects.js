@@ -31,7 +31,6 @@ export default class Projects extends React.Component{
         </div>}
         <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>
       </div>
-      {/* <div style={{height: '4rem'}}/> */}
       <Footer/>
     </div>
     )
