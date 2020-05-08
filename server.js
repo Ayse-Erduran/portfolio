@@ -2,7 +2,6 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const PORT = process.env.PORT || 3000;
-const db = require('./db')
 
 const app = express();
 module.exports = app;
@@ -14,11 +13,9 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.use('/api', require('./api'))
 
 // static file-serving middleware
-app.use(express.static(path.join(__dirname, '../public')))
-
+app.use(express.static(path.join(__dirname, 'public')))
 
  // any remaining requests with an extension (.js, .css, etc.) send 404
  app.use((req, res, next) => {
@@ -43,14 +40,8 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internal server error.')
 })
 
-async function init(){
-  //sync the database
-  await db.sync()
-  // start listening to our app
-  app.listen(PORT, () => {
-    console.log(`Mixing it up on localhost:${PORT}`)
-  })
-}
-//call init
-init()
+app.listen(PORT, () => {
+  console.log(`Mixing it up on localhost:${PORT}`)
+})
+
 

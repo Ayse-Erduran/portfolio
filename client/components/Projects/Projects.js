@@ -31,7 +31,8 @@ export default class Projects extends React.Component{
         </div>}
         <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>
       </div>
-      <Footer/>
+      <div id="projects-footer"></div>
+        <Footer/>
     </div>
     )
   }

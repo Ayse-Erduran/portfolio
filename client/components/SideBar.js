@@ -48,7 +48,7 @@ export default class SideBar extends React.Component{
       <div className="sidebar-container">
         <div id="home-side-nav">
           <div id="menu-icon">
-            {navbar ? <FontAwesomeIcon icon={faTimes} className="faMenu" onClick={() => handleClick()}/>: <FontAwesomeIcon icon={faGripLines} className="faMenu" onClick={() => handleClick()}/>}
+            {navbar ? <FontAwesomeIcon icon={faTimes} className="faMenu" id="close-menu" onClick={() => handleClick()}/>: <FontAwesomeIcon icon={faGripLines} className="faMenu" onClick={() => handleClick()}/>}
           </div>
           <div id="section-icon">
             {sections.map((section, idx) => (

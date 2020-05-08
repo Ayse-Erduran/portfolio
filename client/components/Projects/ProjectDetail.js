@@ -1,19 +1,19 @@
 import React from 'react'
 import {SideBar, Footer, NavPage} from '../index'
-import {connect} from 'react-redux'
-import {fetchProject} from '../../store'
-import Loader from 'react-loader-spinner'
 import {OverviewImgPlx} from './Plx/OverviewImgPlx'
 import {TechPlx} from './Plx/TechPlx'
 import {StackPlx} from './Plx/StackPlx'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faExpandAlt} from '@fortawesome/free-solid-svg-icons'
+import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import projects from './config'
 
 const defaultState = {
   navbar: false,
   sections: []
-  // sections: ['overview', 'technologies']
 }
 
-class ProjectDetail extends React.Component{
+export default class ProjectDetail extends React.Component{
   constructor(){
     super()
     this.state = defaultState
@@ -27,29 +27,49 @@ class ProjectDetail extends React.Component{
     })
   }
 
-  componentDidMount(){
-    this.props.fetchProject(this.props.match.params.projectName)
-  }
-
   render(){
-    if (this.props.loading) return <Loader type="ThreeDots" color="Salmon" height={50} width={50} />
-    const {name, date, longContent, imgOverview, imgTech, tech} = this.props.project
+    const project = projects.filter(project => (
+      project.name === this.props.match.params.projectName
+    ))[0];
     return (
       <div id="project-detail-outer-container">
         {this.state.navbar ? <NavPage/> :
         <div id="project-detail-container">
           <div id="project-detail-intro">
-            <h2 id="project-detail-intro-left">{name.toUpperCase()}</h2>
-            <h2 id="project-detail-intro-right">{date}</h2>
+            <h2 id="project-detail-intro-left">{project.name.toUpperCase()}</h2>
+            <h2 id="project-detail-intro-right">{project.date}</h2>
           </div>
-          <h3>Overview</h3>
+          <div id="overview-flex">
+            <h3>Overview</h3>
+            <div id="overview-social">
+              <a href={project.github} target="_blank">
+                <FontAwesomeIcon icon={faGithub} id="detail-social" className="single-proj-smaller-fa"/>
+              </a>
+              <a href={project.heroku} target="_blank">
+                <FontAwesomeIcon icon={faExpandAlt} id="detail-expand" className="single-proj-smaller-fa"/>
+              </a>
+            </div>
+          </div>
           <div id="project-detail-overview" className="overview-start">
-            <h6>{longContent}</h6>
-            <OverviewImgPlx name={name} img={imgOverview}/>
+            <p>{project.longContent}</p>
+            <div id="overview-hidden" className={project.name === "Q-Party" ?"Party-ov": 'Overview'}>
+              <img src={project.imgOverview}/>
+            </div>
+            <OverviewImgPlx name={project.name} img={project.imgOverview}/>
           </div>
           <div id="project-detail-tech" className="tech-start">
-            <StackPlx tech={tech}/>
-            <TechPlx img={imgTech}/>
+            <div id="tech-hidden">
+              <div id="stack-hidden">
+                {project.tech.map(elt => (
+                  <p className="stack-elt">{elt}</p>
+                ))}
+              </div>
+              <div id="img-tech">
+                <img src={project.imgTech}/>
+              </div>
+            </div>
+            <StackPlx tech={project.tech}/>
+            <TechPlx img={project.imgTech}/>
           </div>
           <div style={{height: '6rem'}}></div>
           <Footer/>
@@ -60,14 +80,3 @@ class ProjectDetail extends React.Component{
   }
 
 }
-
-const mapState = state => ({
-  project: state.project.project,
-  loading: state.project.loading
-})
-
-const mapDispatch = dispatch => ({
-  fetchProject: projectName => dispatch(fetchProject(projectName))
-})
-
-export default connect(mapState, mapDispatch)(ProjectDetail)

@@ -7,12 +7,12 @@ import Plx from 'react-plx';
 const parallaxData = [
   {
     start: 'self',
-    duration: '10vh',
+    duration: '25vh',
     startOffset: '30vh',
     properties: [
       {
         startValue: 0,
-        endValue: -20,
+        endValue: -30,
         unit: 'vh',
         property: 'translateY',
       }

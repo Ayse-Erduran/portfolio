@@ -9,8 +9,8 @@ const titleData = [
     duration: '35vh',
     properties: [
       {
-        startValue: 15,
-        endValue: 115,
+        startValue: 0,
+        endValue: 30,
         unit: 'vh',
         property: 'translateX',
       }
@@ -22,9 +22,10 @@ const titleData = [
 export const PhotoPlx = () => {
   return (
     <div>
-      <Plx className="Button" id="BiggerButton" parallaxData={titleData}>
-        <NavLink to="/photographs" className="Button" ><button>Photographs</button></NavLink>
+      <Plx className="Button" parallaxData={titleData}>
+        <NavLink to="/photographs" id="BiggerButton"><button>Photographs</button></NavLink>
       </Plx>
     </div>
   );
 }
+// className="Button" 

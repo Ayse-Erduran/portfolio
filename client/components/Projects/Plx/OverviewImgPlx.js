@@ -4,12 +4,12 @@ import Plx from 'react-plx';
 const overviewData = [
   {
     start: '.overview-start',
-    duration: '20vh',
+    duration: '20%',
     properties: [
       {
         startValue: 0,
         endValue: -10,
-        unit: 'vh',
+        unit: '%',
         property: 'translateY',
       },
       {
@@ -24,7 +24,7 @@ const overviewData = [
 
 export const OverviewImgPlx = ({name, img}) => {
   return (
-    <div>
+    <div className="hidden-plx">
       <Plx className={name === "Q-Party" ?"Party-ov": 'Overview'} parallaxData={overviewData}>
         <img src={img}/>
       </Plx>

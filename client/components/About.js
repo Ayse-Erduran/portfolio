@@ -96,7 +96,9 @@ export default class About extends React.Component{
               </div>
           </div>}
         </div>
-        <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>
+        <div id="about-sidebar">
+          <SideBar navbar={this.state.navbar} sections={this.state.sections} handleClick={this.handleClick}/>
+        </div>
       </div>
     )
   }

@@ -1,27 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {fetchAllProjects} from '../../store'
-import {connect} from 'react-redux'
-import Loader from 'react-loader-spinner'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderOpen, faExpandAlt} from '@fortawesome/free-solid-svg-icons'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import projects from './config'
 
+export const SingleProject = ({projectName}) => {
+    const project = projects.filter(project => (
+      project.name === projectName
+    ))[0];
 
-class SingleProject extends React.Component{
-  constructor(props){
-    super(props)
-  }
-
-  componentDidMount(){
-    this.props.fetchAllProjects()
-  }
-
-  render(){
-    if(this.props.projectsLoading) return <div id="spinner"><Loader type="TailSpin" color="#294c60" height={50} width={50}/></div>
-    const project = this.props.projects.filter(project => (
-      project.name === this.props.projectName
-    ))[0]
     return(
       <div id="single-project">
         <div id="single-project-top">
@@ -45,18 +33,6 @@ class SingleProject extends React.Component{
         </div>
       </div>
     )
-  }
 
 }
-
-const mapState = state => ({
-  projects: state.project.projects,
-  projectsLoading: state.project.projectsLoading
-})
-
-const mapDispatch = dispatch => ({
-  fetchAllProjects: () => dispatch(fetchAllProjects())
-})
-
-export default connect(mapState, mapDispatch)(SingleProject)
 
