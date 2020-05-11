@@ -1,7 +1,7 @@
 import React from 'react'
 import {PhotoPlx} from './Plx/PhotoPlx'
 import simpleParallax from 'simple-parallax-js';
-import { PhotoGallery } from '../index'
+import {NavLink} from 'react-router-dom'
 
 
 export class HomePhotography extends React.Component{
@@ -26,4 +26,3 @@ export class HomePhotography extends React.Component{
     )
   }
 }
-

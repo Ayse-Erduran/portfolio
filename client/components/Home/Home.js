@@ -30,7 +30,6 @@ export default class Home extends React.Component{
               <div id="home-comps">
                 <Intro/>
                 <HomeAbout/>
-                <div className="project-transition"></div>
                 <HomeProjects/>
                 <div className="photo-transition"></div>
                 <HomePhotography/>

@@ -43,25 +43,24 @@ export default class Photos extends React.Component{
             </div>
             <div id="photos">
               <div id="first-row">
-                <img className="first-row" src="/images/photos/1.jpeg"/>
-                <img className="first-row" src="/images/home-photo.jpeg"/>
+                <img className="first-row" src="/images/photos/1.jpg"/>
+                <img className="first-row" src="/images/photos/home-photo.jpg"/>
               </div>
               <div id="second-row">
-                <img className="second-row" src="/images/photos/3.jpeg"/>
-                <img className="second-row" id="ontop" src="/images/photos/4.jpeg"/>
+                <img className="second-row" src="/images/photos/3.jpg"/>
+                <img className="second-row" id="ontop" src="/images/photos/4.jpg"/>
               </div>
               <img className="plx" src="/images/photos/5.jpeg"/>
               <div id="fourth-row">
-                <img className="fourth-row" src="/images/photos/6.jpeg"/>
-                <img className="fourth-row" src="/images/photos/7.jpeg"/>
+                <img className="fourth-row" src="/images/photos/6.jpg"/>
+                <img className="fourth-row" src="/images/photos/7.jpg"/>
               </div>
               <div id="fifth-row">
-                <img className="fifth-row" src="/images/photos/8.jpeg"/>
-                <img className="fifth-row" src="/images/photos/9.jpeg"/>
-                <img className="fifth-row" id="right" src="/images/photos/10.jpeg"/>
+                <img className="fifth-row" src="/images/photos/8.jpg"/>
+                <img className="fifth-row" src="/images/photos/9.jpg"/>
+                <img className="fifth-row" id="right" src="/images/photos/10.jpg"/>
               </div>
-              {/* <img className="plx" id="large" src="/images/photos/12.jpeg"/> */}
-              <img className="last" src="/images/photos/12.jpeg"/>
+              <img className="last" src="/images/photos/11.jpg"/>
             </div>
             <Footer/>
           </div>

@@ -82,7 +82,6 @@ body{
   margin-top: 30%;
   font-family: 'Antic Didone', serif;
   align-items: center;
-  
 }
 
 .center > h1{
@@ -112,8 +111,11 @@ body{
   font-weight: 100;
   color: darkgrey;
 }
+#non-plx-hac{
+  display: none;
+}
 
-#home-about-content > p {
+.home-about-content > p {
   font-family: 'Antic Didone', serif;
   font-size: 28px;
   font-weight: 100;
@@ -121,10 +123,10 @@ body{
   margin: 0;
   padding: 0;
   margin-bottom: 2px;
-  color: #2f4550
+  color: #2f4550;
 }
 
-#home-about-content{
+.home-about-content{
   margin-top: 20%;
   line-height: 2.2rem;
 }
@@ -142,7 +144,7 @@ body{
   margin-left: 10%;
 }
 
-#home-about-button > button{
+.navlink > button{
   width: 8rem;
   height: 3rem;
   font-size: 24px;
@@ -157,7 +159,7 @@ body{
   margin-left: 70%;
 }
 
-.Button > button:hover, #home-about-button > button:hover{
+.Button > button:hover, .BiggerButton > button:hover,.navlink > button:hover{
   color: #247ba0;
   border: 1px solid #247ba0;
 }
@@ -168,7 +170,7 @@ body{
 }
 
 
-.Button > button, #BiggerButton > button{
+.Button > button, .BiggerButton > button{
   width: 10rem;
   height: 3rem;
   letter-spacing: 0.1rem;
@@ -182,13 +184,13 @@ body{
   margin-top: 5rem;
 }
 
-#BiggerButton > button{
+.BiggerButton > button{
   width: 12rem;
   margin-left:40rem;
 
 }
 
-.static-button{
+.static-button, #photo-hidden{
   display: none;
 }
 
@@ -206,6 +208,7 @@ body{
 
 
 /* PHOTOGRAPHS PAGE */
+
 
 #photo-plx{
   width: 70%;
@@ -317,7 +320,7 @@ body{
 .foreground{
   position: absolute;
   z-index: 4;
-  margin-left: 30%;
+  margin-left: 20%;
 }
 
 .icon:hover{
@@ -754,14 +757,14 @@ button.enable-submit{
     width: 8rem;
     height: 3rem;
   }
-  #BiggerButton > button{
+  .BiggerButton > button{
     margin-right: 30rem;
   }
 
 }
 
 @media (max-width: 700px){
-  #BiggerButton > button{
+  .BiggerButton > button{
     margin-right: 20rem;
   }
   #navbar-left{
@@ -786,7 +789,7 @@ button.enable-submit{
   #photo-plx{
     width: 100%;
   }
-  .Button > #BiggerButton{
+  .Button > .BiggerButton{
     margin-left: -20%;
   }
   #about-intro{
@@ -865,10 +868,9 @@ button.enable-submit{
     height: 100%;
     margin-left: 5rem;
   }
-
   #photo-plx{
     margin-left: 8rem;
-  }
+  } 
   #intro-box{
     bottom: -60%;
     width: 40%;
@@ -914,7 +916,7 @@ button.enable-submit{
     height: 30rem;
     margin-left: 5rem;
   }
-  #BiggerButton > button{
+  .BiggerButton > button{
     margin-left: 25rem;
     font-size: 1.4rem;
     width: 8rem;
@@ -927,7 +929,10 @@ button.enable-submit{
 
 /* OTHERDEVICES */
 /* IPHONE 5/SE */
-@media (max-width: 320px) and (min-height: 568px){
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
   .center{
     margin: 8%;
     margin-top: 70%;
@@ -945,7 +950,7 @@ button.enable-submit{
     margin-top: 70%;
     margin-bottom: 20%;
   }
-   #home-about-content > p{
+  .home-about-content > p{
     font-size: 1.4rem;
     line-height: 1.8rem;
   }
@@ -964,7 +969,7 @@ button.enable-submit{
     height: 280px;
     margin-left: 1rem;
   }
-  #moving-button{
+  .moving-button{
     display: none;
   }
   
@@ -973,7 +978,7 @@ button.enable-submit{
     margin-left: 1rem;
   }
 
-  #BiggerButton > button{
+  .BiggerButton > button{
     display: inline-block;
     margin-right: 50rem; 
   }
@@ -1170,7 +1175,10 @@ button.enable-submit{
 /* IPHONE 6/7/8 */
 /* GALAXY S5 */
 /* MOTO G4 */
-@media (max-width: 375px) and (min-height: 667px), (max-width: 360px) and (min-height: 640px){
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait), (max-width: 360px) and (min-height: 640px){
   .center{
     margin: 10%;
     margin-top: 70%;
@@ -1188,7 +1196,7 @@ button.enable-submit{
     margin-top: 70%;
     margin-bottom: 10%;
   }
-   #home-about-content > p{
+   .home-about-content > p{
     font-size: 1.6rem;
     line-height: 2rem;
   }
@@ -1208,7 +1216,7 @@ button.enable-submit{
     height: 280px;
     margin-left: 1rem;
   }
-  #moving-button{
+  .moving-button{
     display: none;
   }
   
@@ -1223,7 +1231,7 @@ button.enable-submit{
     padding-right: 5rem;
   }
 
-  #BiggerButton > button{
+  .BiggerButton > button{
     display: inline-block;
     margin-right: 35rem; 
   }
@@ -1367,266 +1375,322 @@ button.enable-submit{
       font-size: 18px;
       width: 340px;
     }
-
 }
 /* IPHONEX */
-@media (max-width: 375px) and (min-height: 812px){
-  #navbar-right{
-    margin-top: -20rem;
-  }
-
-  .center{
-    min-width: 375px;
-  }
-
-  .HomeAbout{
-    margin-top: 90%;
-    margin-bottom: 15%;
-  }
-  .project-transition{
-    margin: 5rem;
-  }
-
-  #home-about-button > button{
-    margin-left: 7rem;
-  }
-
-  #project-plx{
-    width:60%;
-    height: 200px;
-    margin-top: 300px;
-    margin-bottom: -1rem;
-  }
-  
-  #photo-plx{
-    width: 18rem;
-    height: 280px;
-    margin-left: 1rem;
-  }
-
-  #moving-button{
-    display: none;
-  }
-  
-  .static-button{
-    display: inline-block;
-  }
-  .footer-container{
-    margin-top: -1rem;
-    max-width: 375px;
-    padding-right: 45px;
-  }
-  .Button > button{
-   margin-left: 2rem;
-   margin-top: 3rem;
-  }
-  #BiggerButton > button{
-    display: inline-block;
-    margin-right: 35rem; 
-  }
-
-  #home-main{
-    margin-top: 200px;
-  }
-
-  #about-container{
-    width: 100%;
-    border: hidden;
-  }
-  
-  #about-intro{
-    margin-left: 0;
-  }
-  #about-intro > img{
-    width: 100%;
-    margin-left: 0;
-    margin-top: 4rem;
-  }
-  
-  #intro-box{
-    min-width: 270px;
-    margin-left: 45%;
-  }
-
-  #home-side-nav{
-    position: absolute;
-    margin-left: 15rem;
-  }
-  #intro-box > p{
-    font-size: 16px;
-  }
-  #about-intro > h3 {
-    left: 1rem;
-  }
-
-  #past-present{
-    width: 300px;
-    margin-left: 40px;
-    font-size: 16px;
-    letter-spacing: 0;
-  }
-
-  #skills{
-    margin-top: 2rem;
-    height: 100%;
-    background: black;
-  } 
-  #skills > h3{
-    font-size: 18px;
-    padding-left: 2rem
-  }
-
-  #ul-left > li,  #ul-right> li{
-    font-size: 14px;
-    margin-left: 8px;
-  }
-  #projects-outer-parent{
-    width: 100%;
-    border: hidden;
-  }
-
-  #projects-container{
-    margin-top: 15%;
-  }
-  #single-project{
-    width: 300px;
-    height: 200px;
-    margin-left: 10%;
-  }
-
-  #single-project-content > p{
-    font-size: 14px;
-  }
-  #single-project-content > h4{
-    font-size: 16px;
-  }
-  #projects-footer{
-    height: 10rem;
-  }
-
-
-    /* PROJECT DETAIL */
-    #project-detail-container{
-      width: 100%;
-      border:hidden;
+@media only screen 
+and (min-width : 375px) 
+and (max-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) { 
+    html{
+      position: fixed;
+      overflow: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
 
-    .Stack, .Tech, .hidden-plx{
-      display: none
-    } 
-  
-    #overview-hidden, #tech-hidden{
+    body{
+      height: 100%;
+      overflow: scroll;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    #navbar-right{
+        margin-top: -20rem;
+      }
+    .center{
+      margin-top: 80%;
+      min-width: 100%;
+    }
+    .center > h1{
+      font-size: 0.5rem;
+    }
+    .HomeAbout{
+      display: none;
+    }
+    .Arrow{
+      display: none;
+    }
+
+    #non-plx-hac{
       display: inline-block;
-    } 
-
-    .Overview > img{
-      width: 90%;
-      margin-left: 2%;
-    }
-
-    #img-tech > img{
-      width: 320px;
-      margin-top: 10%;
-      margin-left: 5%;
-    }
-    #overview-hidden > img{
-      width: 100%;
-    }
-  
-    #stack-hidden{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width: 360px;
-      margin-left: 5%;
-
-    } 
-    #stack-hidden > p{
-      font-size: 22px;
-      margin: 2px;
-      padding: 0;
-    }
-    #overview-flex > h3{
-      font-size: 20px;
-      letter-spacing: 1px;
-      margin-left: 5%;
-      flex-basis: 75%;
-
-    }
-    #overview-social{
-      flex-basis: 25%;
-    }
-
-    #project-detail-intro{
-      font-size: 24px;
+      margin: 0;
       margin-top: 20%;
-      border: 1px ridge #e8e8eb;
-    }
-    
-    #project-detail-intro > h2 {
-      padding-left: 5%;
-      letter-spacing: 1px
-    }
-    
-    #project-detail-intro-left{
-      flex-basis: 72%;
-    }
-    #project-detail-intro-right{
-      flex-basis: 28%;
-    }
-    #project-detail-overview{
-      margin-left: 5%;
-    }
-    
-    #project-detail-overview > p {
-      font-size: 18px;
-      width: 350px;
-    }
-    /* PHOTOS */
-    #photos-inner-container{
-      max-width: 375px;
-    }
-    #photo-title{
-      margin-right: 1rem;
-      margin-top: 25%;
-    }
-    #photo-title > h1{
-      font-size: 18px;
-    }
-  
-    #first-row > img, #fourth-row>img, #second-row>img{
-      width: 90%;
-      height: 90%;
-      margin-bottom: 3rem;
-    }
-  
-    .second-row, .fifth-row{
-      margin-left: -5rem;
-    }
-    
-    .plx{
-      margin-left: 8rem;
-    }
-    
-    
-    .last{
-      margin-left: 0;
-    }
-    
-    #ontop{
-      margin-left: 5rem;
-      margin-top: 3rem;
-    }
-    
-    #right{
-      margin-left: 5rem;
+      margin-bottom: 10%;
     }
 
-}
+    #homeabout-plx-outer{
+      padding: 10%;
+      margin-top: 40%;
+    }
+    #home-about-button{
+      margin-right: 10%;
+    }
+
+    .navlink > button:hover{
+      color: #247ba0;
+      border: 1px solid #247ba0;
+    }
+
+    #project-plx{
+      min-width: 300px;
+      min-height: 200px;
+      margin-bottom: 50px;
+    }
+      
+    #photo-plx{
+      max-width: 300px;
+      max-height: 220px;
+      margin-left: 1rem;
+    }
+    
+    .moving-button, #photo-plx-hidden{
+      display: none;
+    }
+
+    .static-button{
+      display: inline-block;
+      position: absolute;
+      z-index: 10;
+    }
+
+    .home-projects-container, .home-photo-container{
+      position: relative;
+    }
+
+    .Button > button{
+      position: absolute;
+      top: -30px;
+      left: 10px;
+    }
+    #Bigger > button {
+      width: 200px;
+      margin-left: 120px;
+      
+    }
+
+    .foreground{
+      position: relative;
+      margin-left: -200px;
+    }
+    .footer-container{
+      margin-top: -1rem;
+      max-width: 375px;
+      padding-right: 0;
+      padding-left: 0;
+      border: 2px solid black;
+    }
+
+    #photo-hidden{
+      display: block;
+    }
+    #home-main{
+      margin-top: 200px;
+    }
+    
+    #about-container{
+      width: 100%;
+      border: hidden;
+    }
+      
+      #about-intro{
+        margin-left: 0;
+      }
+      #about-intro > img{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4rem;
+      }
+      
+      #intro-box{
+        min-width: 270px;
+        margin-left: 45%;
+      }
+    
+      #home-side-nav{
+        position: absolute;
+        margin-left: 15rem;
+      }
+      #intro-box > p{
+        font-size: 16px;
+      }
+      #about-intro > h3 {
+        left: 1rem;
+      }
+    
+      #past-present{
+        width: 300px;
+        margin-left: 40px;
+        font-size: 16px;
+        letter-spacing: 0;
+      }
+    
+      #skills{
+        margin-top: 2rem;
+        height: 100%;
+        background: black;
+      } 
+      #skills > h3{
+        font-size: 18px;
+        padding-left: 2rem
+      }
+    
+      #ul-left > li,  #ul-right> li{
+        font-size: 14px;
+        margin-left: 8px;
+      }
+      #projects-outer-parent{
+        width: 100%;
+        border: hidden;
+      }
+    
+      #projects-container{
+        margin-top: 15%;
+      }
+      #single-project{
+        width: 300px;
+        height: 200px;
+        margin-left: 10%;
+      }
+    
+      #single-project-content > p{
+        font-size: 14px;
+      }
+      #single-project-content > h4{
+        font-size: 16px;
+      }
+      #projects-footer{
+        height: 10rem;
+      }
+    
+    
+        /* PROJECT DETAIL */
+        #project-detail-container{
+          width: 100%;
+          border:hidden;
+        }
+    
+        .Stack, .Tech, .hidden-plx{
+          display: none
+        } 
+      
+        #overview-hidden, #tech-hidden{
+          display: inline-block;
+        } 
+    
+        .Overview > img{
+          width: 90%;
+          margin-left: 2%;
+        }
+    
+        #img-tech > img{
+          width: 320px;
+          margin-top: 10%;
+          margin-left: 5%;
+        }
+        #overview-hidden > img{
+          width: 100%;
+        }
+      
+        #stack-hidden{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          width: 360px;
+          margin-left: 5%;
+    
+        } 
+        #stack-hidden > p{
+          font-size: 22px;
+          margin: 2px;
+          padding: 0;
+        }
+        #overview-flex > h3{
+          font-size: 20px;
+          letter-spacing: 1px;
+          margin-left: 5%;
+          flex-basis: 75%;
+    
+        }
+        #overview-social{
+          flex-basis: 25%;
+        }
+    
+        #project-detail-intro{
+          font-size: 24px;
+          margin-top: 20%;
+          border: 1px ridge #e8e8eb;
+        }
+        
+        #project-detail-intro > h2 {
+          padding-left: 5%;
+          letter-spacing: 1px
+        }
+        
+        #project-detail-intro-left{
+          flex-basis: 72%;
+        }
+        #project-detail-intro-right{
+          flex-basis: 28%;
+        }
+        #project-detail-overview{
+          margin-left: 5%;
+        }
+        
+        #project-detail-overview > p {
+          font-size: 18px;
+          width: 350px;
+        }
+        /* PHOTOS */
+        #photos-inner-container{
+          max-width: 375px;
+        }
+        #photo-title{
+          margin-right: 1rem;
+          margin-top: 25%;
+        }
+        #photo-title > h1{
+          font-size: 18px;
+        }
+      
+        #first-row > img, #fourth-row>img, #second-row>img{
+          width: 90%;
+          height: 90%;
+          margin-bottom: 3rem;
+        }
+      
+        .second-row, .fifth-row{
+          margin-left: -5rem;
+        }
+        
+        .plx{
+          margin-left: 8rem;
+        }
+        
+        
+        .last{
+          margin-left: 0;
+        }
+        
+        #ontop{
+          margin-left: 5rem;
+          margin-top: 3rem;
+        }
+        
+        #right{
+          margin-left: 5rem;
+        }
+    }
 
 /* IPHONE 6/7/8 PLUS */
 /* PIXEL 2 */
-@media (max-width: 414px) and (min-height: 736px), (max-width: 411px) and (min-height: 731px){
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait), (max-width: 411px) and (min-height: 731px){
   .center{
     margin: 8%;
     margin-top: 70%;
@@ -1651,17 +1715,19 @@ button.enable-submit{
     margin-top: 70%;
     margin-bottom: 10%;
   }
-   #home-about-content > p{
+  .home-about-content > p{
     font-size: 1.6rem;
     line-height: 2rem;
   }
   #home-about-button > button{
     margin-left: 10rem;
   }
+
+  /* HERE 
   #project-plx{
     width: 414px;
     height: 100%;
-  }
+  } */
 
   #project-plx{
     width: 60%;
@@ -1675,7 +1741,7 @@ button.enable-submit{
     height: 280px;
     margin-left: 1rem;
   }
-  #moving-button{
+  .moving-button{
     display: none;
   }
   
@@ -1691,7 +1757,7 @@ button.enable-submit{
     padding-right: 5rem;
   }
 
-  #BiggerButton > button{
+  .BiggerButton > button{
     display: inline-block;
     margin-right: 35rem; 
   }
@@ -1834,7 +1900,10 @@ button.enable-submit{
     }
 }
 /* IPAD */
-@media (max-width: 768px) and (min-height: 1024px){
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
   .center{
     margin-top: 60%;
   }
@@ -1847,7 +1916,7 @@ button.enable-submit{
   .Button{
     margin-left: -3rem;
   }
-  #BiggerButton{
+  .BiggerButton{
     margin-left: 0;
   }
   #navbar-left{
@@ -1915,10 +1984,21 @@ button.enable-submit{
     width: 700px;
     margin-left: 8%;
   } 
+    /* PHOTO */
+    .last{
+      display: none;
+    }
+    #second-row, #fifth-row{
+      padding-left: 3%;
+    }
 }
 
 /* IPADPRO */
-@media (max-width: 1024px) and (min-height: 1366px){
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (orientation: portrait){
   .center{
     margin-top: 60%;
   }
@@ -1931,7 +2011,7 @@ button.enable-submit{
     font-size: 2rem;
     letter-spacing: 0.3rem;
   }
-  
+
   #home-main{
     width: 100%;
   }
@@ -1944,22 +2024,26 @@ button.enable-submit{
   }
   .HomeAbout{
     margin-top: 50%;
+    width: 80%;
+    padding-left: 5%;
   }
-  #home-about-content > p{
+  .home-about-content > p{
     font-size: 2.5rem;
     line-height: 3rem;
   }
   #home-about-button > button{
-    font-size: 2rem;
+    font-size: 2.3rem;
     width: 13rem;
     height: 4rem;
   }
+
   .Button{
     margin-left: -4rem;
   }
   #navbar-left{
     margin-top: -30rem;
   }
+
   #about-container{
     width: 100%;
   }
@@ -2024,8 +2108,15 @@ button.enable-submit{
     width: 800px;
     margin-left: 8rem;
   } 
-
+  /* PHOTO */
+  .last{
+    display: none;
+  }
+  #second-row, #fifth-row{
+    padding-left: 3%;
+  }
 }
+
 @media (min-width: 1160px){
   #photos-inner-container{
     width: 88%;
@@ -2034,7 +2125,7 @@ button.enable-submit{
 }
 
 @media (max-width: 1160px){
-  #BiggerButton > button{
+  .BiggerButton > button{
     margin-left: 25rem;
     font-size: 1.4rem;
     width: 12rem;
@@ -2111,6 +2202,13 @@ button.enable-submit{
   
   #project-social{
     margin-left: 0;
+  }
+  
+}
+@media (min-width: 1400px){
+  #photo-plx, #project-plx{
+    width: 100%;
+    height: 100%;
   }
   
 }

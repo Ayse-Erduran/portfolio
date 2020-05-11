@@ -87,6 +87,7 @@ export default class About extends React.Component{
                       <li><CaretRightOutlined />Chai</li>
                       <li><CaretRightOutlined />Heroku</li>
                       <li><CaretRightOutlined />Travis</li>
+                      <li><CaretRightOutlined />AWS</li>
                       <li><CaretRightOutlined />Phaser</li>
                     </ul>
                   </div>

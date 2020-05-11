@@ -21,9 +21,14 @@ const titleData = [
 export const ProjectPlx = () => {
   return (
     <div>
-      <Plx className="Button" parallaxData={titleData}>
+      <div className="moving-button">
+        <Plx className="Button" parallaxData={titleData}>
+          <NavLink to="/projects" className="Button"><button>Projects</button></NavLink>
+        </Plx>
+      </div>
+      <div className="static-button">
         <NavLink to="/projects" className="Button"><button>Projects</button></NavLink>
-      </Plx>
+      </div>
     </div>
   );
 }

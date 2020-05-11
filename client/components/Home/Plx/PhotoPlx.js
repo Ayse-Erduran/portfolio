@@ -18,14 +18,22 @@ const titleData = [
   }
 ]
 
-
 export const PhotoPlx = () => {
   return (
     <div>
-      <Plx className="Button" parallaxData={titleData}>
-        <NavLink to="/photographs" id="BiggerButton"><button>Photographs</button></NavLink>
-      </Plx>
+      <div className="moving-button">
+        <Plx className="Button" parallaxData={titleData}>
+          <NavLink to="/photographs" className="BiggerButton"><button>Photographs</button></NavLink>
+        </Plx>
+      </div>
+      <div className="static-button">
+        <div>
+          <NavLink to="/photographs" className="Button" id="Bigger"><button>Photographs</button></NavLink>
+        </div>
+      </div>
     </div>
   );
 }
-// className="Button" 
+
+
+// className="Button" id="BiggerButton"

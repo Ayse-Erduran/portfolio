@@ -20,12 +20,7 @@ export class HomeProjects extends React.Component{
   render(){
     return(
       <div className="home-projects-container" id="HomeProjects">
-        <div id="moving-button">
-          <ProjectPlx/>
-        </div>
-        <div className="static-button">
-          <NavLink to="/projects" className="Button"><button>Projects</button></NavLink>
-        </div>
+        <ProjectPlx/>
         <img id="project-plx" src="/images/projects/Q-Party.png "/>
       </div>
     )
