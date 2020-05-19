@@ -33,6 +33,10 @@ export default class SideBar extends React.Component{
     this.setState = {
       sections: this.selectSection(0)
     }
+    const logo = document.getElementById("lisc");
+    window.addEventListener('scroll', () => {
+      logo.style.transform = "rotate("+window.pageYOffset+"deg)";
+    })
   }
 
   changeSection(idx){
@@ -53,12 +57,14 @@ export default class SideBar extends React.Component{
           <div id="section-icon">
             {sections.map((section, idx) => (
               <div>
-                <Link activeClass='selected' to={section} spy={true} smooth={true}>
+                <Link activeClass='selected' to={section} spy={true} offset={-70} smooth={true}>
                   <FontAwesomeIcon icon={faCircle} className="faCircle" onClick={() => this.changeSection(idx)}/>
                 </Link>
               </div>))
             }
           </div>
+          <img id="lisc" src="/images/logo.png"/>
+          <a href="mailto: ayyseerduran@gmail.com" id="contact-logo">contact</a>
         </div>
       </div>
     )

@@ -5,8 +5,6 @@ import {Routes} from './index'
 
 export const App = () => {
   return (
-    <div id="app-container">
-      <Routes/>
-    </div>
+    <Routes/>
   )
 }

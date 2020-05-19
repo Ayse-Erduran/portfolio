@@ -52,8 +52,9 @@ export default class ProjectDetail extends React.Component{
           </div>
           <div id="project-detail-overview" className="overview-start">
             <p>{project.longContent}</p>
-            <div id="overview-hidden" className={project.name === "Q-Party" ?"Party-ov": 'Overview'}>
-              <img src={project.imgOverview}/>
+            {/* <div id="overview-hidden" className={project.name === "Q-Party" ?"Party-ov": 'Overview'}> */}
+            <div className={project.name === "Q-Party" ?"Party-ov": 'Overview'}>
+              <img id="overview-hidden" src={project.imgOverview}/>
             </div>
             <OverviewImgPlx name={project.name} img={project.imgOverview}/>
           </div>

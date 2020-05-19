@@ -7,7 +7,7 @@ import Plx from 'react-plx';
 
 const parallaxData = [
   {
-    start: '.trial',
+    start: '.homeabout-plx-outer',
     duration: '25vh',
     startOffset: '30vh',
     properties: [
@@ -35,7 +35,7 @@ const parallaxData = [
 
 export const HomeAboutPlx = () => {
   return (
-    <div id="homeabout-plx-outer">
+    <div className="homeabout-plx-outer">
       <Plx className="HomeAbout" parallaxData={parallaxData}>
           <div className="home-about-content">
             <p>Hi there.</p>

@@ -28,12 +28,9 @@ export const PhotoPlx = () => {
       </div>
       <div className="static-button">
         <div>
-          <NavLink to="/photographs" className="Button" id="Bigger"><button>Photographs</button></NavLink>
+          <NavLink to="/photographs" className="Button"><button id="Bigger">Photographs</button></NavLink>
         </div>
       </div>
     </div>
   );
 }
-
-
-// className="Button" id="BiggerButton"
