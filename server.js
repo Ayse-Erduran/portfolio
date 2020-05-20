@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // sends index.html
 app.use('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
 // error handling endware

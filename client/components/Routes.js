@@ -1,6 +1,6 @@
 import React from 'react'
 import {About, Home, Projects, ProjectDetail, Photos, NavPage} from './index'
-import {Switch, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 export const Routes = () => {
   return (
